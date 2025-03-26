@@ -4,11 +4,11 @@ import Link from "../components/Link";
 export default function PostList(props) {
 	return (
 		<>
-			<h1>Posts</h1>
+			<h1>Documentation</h1>
 			<Box>
-				{props.data.postConnection.edges.map((post) => (
+				{props.data.documentationConnection.edges.map((post) => (
 					<Box key={post.node.id}>
-						<Link href={`/posts/${post.node._sys.filename}`}>
+						<Link href={`/docs/${post.node._sys.filename}`}>
 							{post.node._sys.filename}
 						</Link>
 					</Box>
