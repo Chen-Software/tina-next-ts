@@ -2,13 +2,9 @@
 title: 'File Storage and Collaboration: Git'
 ---
 
-
-# File Storage and Collaboration: Git
-
 ## Executive Summary
 
 The adoption of Git as the organizational standard for file storage aligns with the dual goals of security and cost efficiency. Git’s inherent version control, combined with cloud backup functionalities provided by platforms like GitHub, GitLab, and Bitbucket, obviates the need for costly alternatives such as Google Drive. The policy mandates the exclusive use of Git for all file storage unless explicitly exempted, emphasizing scalability, security, and cost optimization. Additionally, the policy encourages integrating local-first and open-source tools, such as Radicle, Obsidian, Logseq, and AnyType, to enhance collaboration, maintain local storage benefits, and ensure seamless version control.
-
 
 | Key Elements        | Details                                                                                        |
 | ------------------- | ---------------------------------------------------------------------------------------------- |
@@ -45,9 +41,7 @@ The adoption of Git as the organizational standard for file storage aligns with 
 
 In accordance with the organizational commitment to operational frugality and efficiency, Git is designated as the sole file storage solution. Its decentralized structure, integrated version control, and platform compatibility with repositories such as GitHub, GitLab, and Bitbucket provide a secure, scalable, and cost-efficient mechanism for data management. Decentralized systems like Radicle offer enhanced privacy for sensitive information storage.
 
-
 The organization also encourages the use of local-first software, including Obsidian, Logseq, and AnyType, which offer robust editing and knowledge management capabilities while seamlessly integrating with Git for efficient version control.
-
 
 | Aspect                   | Key Features                                                             |
 | ------------------------ | ------------------------------------------------------------------------ |
@@ -62,7 +56,6 @@ The organization also encourages the use of local-first software, including Obsi
 
 All files, including code, documentation, and other digital assets, must be stored within Git repositories hosted on platforms such as GitHub, GitLab, Bitbucket, or self-hosted alternatives. This ensures that all data is versioned, backed up, and can be easily shared or collaborated upon.
 
-
 | Element                 | Implementation Details                                                                                      |
 | ----------------------- | ----------------------------------------------------------------------------------------------------------- |
 | Backup and Redundancy   | Automated backup systems ensure availability across distributed platforms.                                  |
@@ -70,7 +63,6 @@ All files, including code, documentation, and other digital assets, must be stor
 | Repository Optimization | Regular audits and performance checks will be conducted to ensure optimal repository efficiency.            |
 
 Considerations:
-
 
 * Technical Expertise: Ensuring proper encryption management via tools like git-remote-gcrypt necessitates technical proficiency, potentially requiring additional staff training.
 * Local-First Synchronization: Tools like Obsidian and AnyType support local storage while synchronizing with Git for ongoing version tracking, ensuring seamless collaboration across teams.
@@ -81,14 +73,12 @@ Considerations:
 
 Sensitive data stored in Git repositories will be encrypted using git-remote-gcrypt, ensuring security both at rest and during transmission. PassWarden will be used for secure key management to prevent unauthorized access.
 
-
 | Security Measures | Details                                                                                                      |
 | ----------------- | ------------------------------------------------------------------------------------------------------------ |
 | Encryption        | End-to-end encryption is maintained via GPG keys and git-remote-gcrypt.                                      |
 | Redundancy        | Multi-layered backup systems are implemented to prevent data loss, ensuring availability in case of failure. |
 
 Performance Considerations:
-
 
 * Repository Size: As repositories grow in size or frequency of changes, repository performance can degrade. Techniques such as using Git submodules or splitting large files can mitigate this.
 * Decentralized Solutions: For highly sensitive data, decentralized solutions like Radicle may be employed for additional privacy and security by distributing data control.
@@ -98,7 +88,6 @@ Performance Considerations:
 ### 3.3 Workflow Automation
 
 Git repositories will integrate with CI/CD pipelines to streamline development workflows, improving consistency and reducing manual errors during tasks such as deployment, testing, and monitoring.
-
 
 | Automation Tools     | Details                                                                                                                                  |
 | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
@@ -111,7 +100,6 @@ Git repositories will integrate with CI/CD pipelines to streamline development w
 ### 3.4 Integration of Local-First and Open-Source Software
 
 Local-first tools such as Obsidian, Logseq, and AnyType enhance individual and team productivity by providing rich editing capabilities while allowing seamless synchronization with Git for version control and collaboration.
-
 
 | Tool     | Functionality                                                                                             |
 | -------- | --------------------------------------------------------------------------------------------------------- |
@@ -128,7 +116,6 @@ Local-first tools such as Obsidian, Logseq, and AnyType enhance individual and t
 
 Git platforms like GitHub and GitLab offer free-tier storage, providing a cost-effective alternative to traditional file storage systems such as Google Drive and Dropbox.
 
-
 | Storage Solution | Cost Structure      | Conclusion                                                          |
 | ---------------- | ------------------- | ------------------------------------------------------------------- |
 | Git              | Free-tier available | Cost-effective and scalable for teams of all sizes.                 |
@@ -140,7 +127,6 @@ Git platforms like GitHub and GitLab offer free-tier storage, providing a cost-e
 ### 4.2 Version Control and Automation
 
 Git’s version control system is robust, offering precise tracking of changes, while integration with CI/CD workflows facilitates the automation of testing and deployment tasks.
-
 
 | Solution     | Version Control | Automation Capabilities                                          |
 | ------------ | --------------- | ---------------------------------------------------------------- |
@@ -154,7 +140,6 @@ Git’s version control system is robust, offering precise tracking of changes, 
 
 Git provides native encryption options and integrates with tools such as PassWarden for secure management of encryption keys, making it ideal for safeguarding sensitive data.
 
-
 | Storage Solution | Security Features                                   | Conclusion                                                            |
 | ---------------- | --------------------------------------------------- | --------------------------------------------------------------------- |
 | Git              | End-to-end encryption via GPG and git-remote-gcrypt | Optimal for sensitive data storage.                                   |
@@ -167,7 +152,6 @@ Git provides native encryption options and integrates with tools such as PassWar
 
 Git’s integration with a variety of CI/CD tools, IDEs, and other productivity software ensures scalability as the organization expands.
 
-
 | Solution     | Integration          | Scalability                                                       |
 | ------------ | -------------------- | ----------------------------------------------------------------- |
 | Git          | CI/CD, IDEs, tools   | Highly scalable for growing teams.                                |
@@ -179,7 +163,6 @@ Git’s integration with a variety of CI/CD tools, IDEs, and other productivity 
 ### 4.5 Data Sovereignty
 
 Git’s self-hosting capabilities and decentralized systems like Radicle provide full control over data, ensuring compliance with data sovereignty regulations.
-
 
 | Storage Solution | Sovereignty                 | Conclusion                                                       |
 | ---------------- | --------------------------- | ---------------------------------------------------------------- |
