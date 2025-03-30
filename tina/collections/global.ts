@@ -1,3 +1,5 @@
+import { TextField } from "app/components/Field";
+import { createElement as h } from "react";
 import type { Collection } from "tinacms";
 
 const Global: Collection = {
@@ -18,6 +20,13 @@ const Global: Collection = {
 					type: "string",
 					label: "Name",
 					name: "name",
+					ui: {
+						component: (props) =>
+							h(TextField, {
+								placeholder: "App Name",
+								...props,
+							}),
+					},
 				},
 				{
 					type: "object",

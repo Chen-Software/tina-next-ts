@@ -48,6 +48,8 @@ export const InputField = ({
 
 export const TextField = InputField;
 
+export const MultiLineTextField = (props) => <TextField multiLine {...props} />;
+
 export const SelectField = ({ options, ...props }) => (
 	<FieldBase {...props}>
 		<Field.Select>
