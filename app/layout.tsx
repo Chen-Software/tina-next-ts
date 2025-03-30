@@ -4,6 +4,7 @@ import Link from "./components/Link";
 import "./styles/globals.css";
 import global from "../content/global/index.json";
 import { Box } from "../styled-system/jsx";
+import { Menu } from "./components/Menu";
 
 export default function RootLayout({
 	children,
@@ -42,6 +43,15 @@ export default function RootLayout({
 					])}
 				</Box>
 			</Box>
+			<Menu
+				trigger="Trigger Name"
+				indicator="->"
+				options={[
+					{ value: "option1", label: "Option 1" },
+					{ value: "option2", label: "Option 2" },
+					{ value: "option3", label: "Option 3" },
+				]}
+			/>
 			<main>{children}</main>
 		</Box>,
 	);
