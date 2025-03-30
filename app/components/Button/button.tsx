@@ -4,7 +4,7 @@ import { Spinner } from "../Spinner";
 import {
 	Button as StyledButton,
 	type ButtonProps as StyledButtonProps,
-} from "./styled";
+} from "./styled/button";
 
 interface ButtonLoadingProps {
 	loading?: boolean;
