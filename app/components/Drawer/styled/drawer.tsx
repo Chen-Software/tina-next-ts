@@ -1,5 +1,5 @@
 "use client";
-import type { Assign, PolymorphicProps } from "@ark-ui/react";
+import type { Assign } from "@ark-ui/react/";
 import { Dialog } from "@ark-ui/react/dialog";
 import { ark } from "@ark-ui/react/factory";
 import { type DrawerVariantProps, drawer } from "styled-system/recipes";
@@ -55,17 +55,17 @@ export const Trigger = withContext<
 
 export const Header = withContext<
 	HTMLDivElement,
-	Assign<HTMLStyledProps<"div">, PolymorphicProps>
+	Assign<HTMLStyledProps<"div">, object>
 >(ark.div, "header");
 
 export const Body = withContext<
 	HTMLDivElement,
-	Assign<HTMLStyledProps<"div">, PolymorphicProps>
+	Assign<HTMLStyledProps<"div">, object>
 >(ark.div, "body");
 
 export const Footer = withContext<
 	HTMLDivElement,
-	Assign<HTMLStyledProps<"div">, PolymorphicProps>
+	Assign<HTMLStyledProps<"div">, object>
 >(ark.div, "footer");
 
 export {
