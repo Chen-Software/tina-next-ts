@@ -1,3 +1,5 @@
+import { button } from "../../app/components/Button/button.template";
+
 /**
  * @type {import('tinacms').Collection}
  */
@@ -10,8 +12,10 @@ export default {
 		{
 			name: "body",
 			label: "Main Content",
-			type: "rich-text",
+			type: "object",
+			list: true,
 			isBody: true,
+			templates: [button],
 		},
 	],
 	ui: {
