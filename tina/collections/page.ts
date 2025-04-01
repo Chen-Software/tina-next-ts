@@ -1,3 +1,4 @@
+import { heading } from "app/components/Heading/heading.template";
 import { button } from "../../app/components/Button/button.template";
 
 /**
@@ -15,7 +16,7 @@ export default {
 			type: "object",
 			list: true,
 			isBody: true,
-			templates: [button],
+			templates: [button, heading],
 		},
 	],
 	ui: {

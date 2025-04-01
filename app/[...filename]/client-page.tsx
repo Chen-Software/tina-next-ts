@@ -1,5 +1,6 @@
 "use client";
 import { Button } from "app/components/Button";
+import { H1, H2, H3, H4, H5, H6, Heading } from "app/components/Heading";
 import React, { createElement as h } from "react";
 import { tinaField, useTina } from "tinacms/dist/react";
 import { Box } from "../../styled-system/jsx";
@@ -26,6 +27,24 @@ export default function ClientPage(props: ClientPageProps) {
 		<Box data-tina-field={tinaField(data.page, "body")}>
 			{content?.map((block, index) => {
 				switch (block?.__typename) {
+					case "PageBodyHeading": {
+						const headingComponent = {
+							h1: H1,
+							h2: H2,
+							h3: H3,
+							h4: H4,
+							h5: H5,
+							h6: H6,
+						}[block.type || "h1"];
+						return (
+							<Heading
+								as={headingComponent}
+								key={`${index}-${block?.__typename}`}
+							>
+								{block.content}
+							</Heading>
+						);
+					}
 					case "PageBodyButton":
 						return (
 							<Button
