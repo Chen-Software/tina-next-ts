@@ -1,9 +1,13 @@
-import { Text } from "./text";
+import { Text as TextBase } from "./text";
 
 export const Paragraph = (props) => (
-	<Text as="p" {...props}>
+	<TextBase as="p" {...props}>
 		{props?.children}
-	</Text>
+	</TextBase>
+);
+
+export const Text = (props) => (
+	<TextBase {...props}>{props?.children}</TextBase>
 );
 
 export * from "./text";
