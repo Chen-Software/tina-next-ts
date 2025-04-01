@@ -1,7 +1,7 @@
 "use client";
 import { Button } from "app/components/Button";
 import { H1, H2, H3, H4, H5, H6, Heading } from "app/components/Heading";
-import { Text } from "app/components/Text";
+import { Paragraph, Text } from "app/components/Text";
 import React, { createElement as h } from "react";
 import { tinaField, useTina } from "tinacms/dist/react";
 import { Box } from "../../styled-system/jsx";
@@ -51,6 +51,15 @@ export default function ClientPage(props: ClientPageProps) {
 							<Text size={block.size || "md"} fontWeight={block.fontWeight}>
 								{block.content}
 							</Text>
+						);
+					case "PageBodyParagraph":
+						return (
+							<Paragraph
+								size={block.size || "md"}
+								fontWeight={block.fontWeight}
+							>
+								{block.content}
+							</Paragraph>
 						);
 					case "PageBodyButton":
 						return (
