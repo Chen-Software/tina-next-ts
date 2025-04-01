@@ -1,7 +1,7 @@
 import { Tooltip } from "../Tooltip";
 import { Button as ButtonBase, type ButtonProps } from "./button";
 
-export const Button = ({ tooltip, children, props }: ButtonProps) => {
+export const Button = ({ tooltip, children, ...props }: ButtonProps) => {
 	if (tooltip) {
 		return (
 			<Tooltip
