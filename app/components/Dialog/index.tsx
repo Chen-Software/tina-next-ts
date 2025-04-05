@@ -15,7 +15,7 @@ export const Dialog = ({
 }: DialogBase.RootProps) => {
 	return (
 		<DialogBase.Root {...props}>
-			<DialogBase.Trigger asChild>{trigger}</DialogBase.Trigger>
+			{trigger && <DialogBase.Trigger asChild>{trigger}</DialogBase.Trigger>}
 			<DialogBase.Backdrop />
 			<DialogBase.Positioner>
 				<DialogBase.Content lazyMount>
