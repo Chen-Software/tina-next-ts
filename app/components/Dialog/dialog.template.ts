@@ -21,29 +21,41 @@ export const dialog: Template = {
 			type: "object",
 			label: "Trigger",
 			name: "trigger",
-			templates: [button],
 			description: "Button to trigger the dialog.",
+			ui: {
+				component: "group",
+			},
+			fields: [...button.fields],
 		},
 		{
 			type: "object",
 			label: "Confirm Button",
 			name: "confirmButton",
-			templates: [button],
 			description: "Button to confirm the action.",
+			ui: {
+				component: "group",
+			},
+			fields: [...button.fields],
 		},
 		{
 			type: "object",
 			label: "Cancel Button",
 			name: "cancelButton",
-			templates: [button],
 			description: "Button to cancel the action.",
+			ui: {
+				component: "group",
+			},
+			fields: [...button.fields],
 		},
 		{
 			type: "object",
 			label: "Close Button",
 			name: "closeButton",
-			templates: [button],
 			description: "Button to close the dialog.",
+			ui: {
+				component: "group",
+			},
+			fields: [...button.fields],
 		},
 		{
 			type: "boolean",
