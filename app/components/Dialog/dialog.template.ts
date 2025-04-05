@@ -45,5 +45,14 @@ export const dialog: Template = {
 			templates: [button],
 			description: "Button to close the dialog.",
 		},
+		{
+			type: "boolean",
+			label: "Lazy Mount",
+			name: "lazyMount",
+			description: "Mount the dialog only when it is open.",
+			ui: {
+				component: "toggle",
+			},
+		},
 	],
 };
