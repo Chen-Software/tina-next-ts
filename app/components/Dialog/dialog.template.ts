@@ -23,6 +23,10 @@ export const dialog: Template = {
 			name: "trigger",
 			templates: [button],
 			description: "Button to trigger the dialog.",
+			list: true,
+			ui: {
+				max: 1,
+			},
 		},
 		{
 			type: "object",
@@ -30,6 +34,10 @@ export const dialog: Template = {
 			name: "confirmButton",
 			templates: [button],
 			description: "Button to confirm the action.",
+			list: true,
+			ui: {
+				max: 1,
+			},
 		},
 		{
 			type: "object",
@@ -37,6 +45,10 @@ export const dialog: Template = {
 			name: "cancelButton",
 			templates: [button],
 			description: "Button to cancel the action.",
+			list: true,
+			ui: {
+				max: 1,
+			},
 		},
 		{
 			type: "object",
@@ -44,6 +56,10 @@ export const dialog: Template = {
 			name: "closeButton",
 			templates: [button],
 			description: "Button to close the dialog.",
+			list: true,
+			ui: {
+				max: 1,
+			},
 		},
 		{
 			type: "boolean",
