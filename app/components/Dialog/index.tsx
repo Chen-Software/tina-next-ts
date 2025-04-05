@@ -17,6 +17,7 @@ export const Dialog = ({
 	confirmButton = defaultConfirmButton,
 	cancelButton = defaultCancelButton,
 	closeButton = defaultCloseButton,
+	context = undefined,
 	lazyMount = true,
 	...props
 }: DialogBase.RootProps) => {
@@ -57,6 +58,7 @@ export const Dialog = ({
 					)}
 				</DialogBase.Content>
 			</DialogBase.Positioner>
+			{context && <DialogBase.Context>{context}</DialogBase.Context>}
 		</DialogBase.Root>
 	);
 };
