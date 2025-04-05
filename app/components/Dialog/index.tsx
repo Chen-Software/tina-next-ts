@@ -11,14 +11,15 @@ export const Dialog = ({
 	description,
 	confirmButton = defaultConfirmButton,
 	cancelButton = defaultCancelButton,
+	lazyMount = true,
 	...props
 }: DialogBase.RootProps) => {
 	return (
-		<DialogBase.Root {...props}>
+		<DialogBase.Root {...props} lazyMount>
 			{trigger && <DialogBase.Trigger asChild>{trigger}</DialogBase.Trigger>}
 			<DialogBase.Backdrop />
 			<DialogBase.Positioner>
-				<DialogBase.Content lazyMount>
+				<DialogBase.Content>
 					<Stack gap="8" p="6">
 						<Stack gap="1">
 							<DialogBase.Title>{title}</DialogBase.Title>
