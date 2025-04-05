@@ -4,6 +4,11 @@ import { Dialog as DialogBase } from "./dialog";
 
 const defaultConfirmButton = <Button>Confirm</Button>;
 const defaultCancelButton = <Button variant="outline">Cancel</Button>;
+const defaultCloseButton = (
+	<Button aria-label="Close" variant="ghost" size="sm">
+		{"×"}
+	</Button>
+);
 
 export const Dialog = ({
 	trigger,
@@ -11,6 +16,7 @@ export const Dialog = ({
 	description,
 	confirmButton = defaultConfirmButton,
 	cancelButton = defaultCancelButton,
+	closeButton = defaultCloseButton,
 	lazyMount = true,
 	...props
 }: DialogBase.RootProps) => {
@@ -39,16 +45,16 @@ export const Dialog = ({
 							)}
 						</Stack>
 					</Stack>
-					<DialogBase.CloseTrigger
-						asChild
-						position="absolute"
-						top="2"
-						right="2"
-					>
-						<Button aria-label="Close" variant="ghost" size="sm">
-							{"×"}
-						</Button>
-					</DialogBase.CloseTrigger>
+					{closeButton && (
+						<DialogBase.CloseTrigger
+							asChild
+							position="absolute"
+							top="2"
+							right="2"
+						>
+							{closeButton}
+						</DialogBase.CloseTrigger>
+					)}
 				</DialogBase.Content>
 			</DialogBase.Positioner>
 		</DialogBase.Root>
