@@ -7,34 +7,6 @@ export const dialog: Template = {
 	fields: [
 		{
 			type: "string",
-			label: "Variant",
-			name: "variant",
-			description: "Determines the look and feel of the dialog.",
-			options: [
-				{
-					value: "solid",
-					label: "Solid",
-				},
-				{
-					value: "outline",
-					label: "Outline",
-				},
-				{
-					value: "ghost",
-					label: "Ghost",
-				},
-				{
-					value: "link",
-					label: "Link",
-				},
-				{
-					value: "subtle",
-					label: "Subtle",
-				},
-			],
-		},
-		{
-			type: "string",
 			label: "Title",
 			name: "title",
 			description: "Title of the dialog.",
@@ -65,6 +37,13 @@ export const dialog: Template = {
 			name: "cancelButton",
 			templates: [button],
 			description: "Button to cancel the action.",
+		},
+		{
+			type: "object",
+			label: "Close Button",
+			name: "closeButton",
+			templates: [button],
+			description: "Button to close the dialog.",
 		},
 	],
 };
