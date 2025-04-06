@@ -1,5 +1,5 @@
 "use client";
-import { Button } from "app/components/Button";
+import { Button } from "app/components/Button/button.cms";
 import { Dialog } from "app/components/Dialog";
 import React, { createElement as h } from "react";
 import { tinaField, useTina } from "tinacms/dist/react";
@@ -13,22 +13,6 @@ interface ClientPageProps {
 	};
 	data: { page: PageQuery["page"] };
 }
-
-const CmsButton = ({
-	variant,
-	tooltip,
-	label,
-	...props
-}: {
-	key?;
-	variant?;
-	tooltip?;
-	label?;
-}) => (
-	<Button variant={variant} tooltip={tooltip} {...props}>
-		{label}
-	</Button>
-);
 
 export default function ClientPage(props: ClientPageProps) {
 	// data passes though in production mode and data is updated to the sidebar data in edit-mode
@@ -45,15 +29,15 @@ export default function ClientPage(props: ClientPageProps) {
 				switch (block?.__typename) {
 					case "PageBodyDialog": {
 						const confirmButton = block.confirmButton && (
-							<CmsButton {...block.confirmButton} />
+							<Button {...block.confirmButton} />
 						);
 						const cancelButton = block.cancelButton && (
-							<CmsButton {...block.cancelButton} />
+							<Button {...block.cancelButton} />
 						);
 						const closeButton = block.closeButton && (
-							<CmsButton {...block.closeButton} />
+							<Button {...block.closeButton} />
 						);
-						const trigger = block.trigger && <CmsButton {...block.trigger} />;
+						const trigger = block.trigger && <Button {...block.trigger} />;
 
 						return (
 							<Dialog
@@ -70,9 +54,7 @@ export default function ClientPage(props: ClientPageProps) {
 					}
 
 					case "PageBodyButton":
-						return (
-							<CmsButton key={`${index}-${block?.__typename}`} {...block} />
-						);
+						return <Button key={`${index}-${block?.__typename}`} {...block} />;
 				}
 			})}
 		</Box>
