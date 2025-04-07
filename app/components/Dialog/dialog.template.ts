@@ -85,6 +85,15 @@ export const dialog: Template = {
 					},
 				},
 				{
+					type: "boolean",
+					label: "Unmount on Exit",
+					name: "unmountOnExit",
+					description: "Whether to unmount on exit.",
+					ui: {
+						component: "toggle",
+					},
+				},
+				{
 					type: "object",
 					label: "Accessibility",
 					name: "accessibility",
