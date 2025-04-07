@@ -2,6 +2,7 @@
 import { Button } from "app/components/Button/button.cms";
 import { Dialog } from "app/components/Dialog/dialog.cms";
 import { Heading } from "app/components/Heading/heading.cms";
+import { Text } from "app/components/Text/text.cms";
 import React, { createElement as h } from "react";
 import { tinaField, useTina } from "tinacms/dist/react";
 import { Box } from "../../styled-system/jsx";
@@ -32,6 +33,8 @@ export default function ClientPage(props: ClientPageProps) {
 						return <Dialog key={`${index}-${block?.__typename}`} {...block} />;
 					case "PageBodyHeading":
 						return <Heading key={`${index}-${block?.__typename}`} {...block} />;
+					case "PageBodyText":
+						return <Text key={`${index}-${block?.__typename}`} {...block} />;
 					case "PageBodyButton":
 						return <Button key={`${index}-${block?.__typename}`} {...block} />;
 				}
