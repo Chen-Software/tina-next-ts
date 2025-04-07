@@ -75,6 +75,24 @@ export const dialog: Template = {
 						component: "toggle",
 					},
 				},
+				{
+					type: "object",
+					label: "Accessibility",
+					name: "accessibility",
+					description: "Accessibility options for the dialog.",
+					ui: {
+						component: "group",
+					},
+					fields: [
+						{
+							type: "string",
+							label: "Label (ARIA)",
+							name: "ariaLabel",
+							description:
+								"Human readable label for the dialog, in event the dialog title is not rendered.",
+						},
+					],
+				},
 			],
 		},
 	],

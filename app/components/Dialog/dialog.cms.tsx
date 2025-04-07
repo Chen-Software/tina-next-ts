@@ -11,12 +11,15 @@ export const Dialog = ({
 	advancedConfigs,
 	...props
 }) => {
+	const { accessibility, ...advancedConfigurations } = advancedConfigs || {};
+
 	return h(DialogBase, {
 		confirmButton: confirmButton && h(Button, confirmButton),
 		cancelButton: cancelButton && h(Button, cancelButton),
 		closeButton: closeButton && h(Button, closeButton),
 		trigger: trigger && h(Button, trigger),
-		...advancedConfigs,
+		...accessibility,
+		...advancedConfigurations,
 		...props,
 	});
 };
