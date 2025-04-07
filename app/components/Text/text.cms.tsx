@@ -54,6 +54,7 @@ export const Text = ({
 				{
 					inline: "span",
 					block: "div",
+					label: "label",
 				}[type || "inline"]
 			}
 			style={styles}
