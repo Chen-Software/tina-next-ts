@@ -1,9 +1,7 @@
-import { Text as TextBase } from ".";
+import { createElement as h } from "react";
+import { Text as TextPark } from ".";
 
-export type TextProps = {
-	__typename: string;
-	key?: string;
-	type?: string | null;
+export type TextBaseProps = {
 	content?: string | null;
 	advancedConfigs?: {
 		accessibility?: {
@@ -20,13 +18,31 @@ export type TextProps = {
 	} | null;
 };
 
-export const Text = ({
-	__typename,
-	type,
+export type TextProps = {
+	__typename: string;
+	key?: string;
+	type?: string | null;
+	content?: string | null;
+} & TextBaseProps;
+
+export const Text = ({ __typename, type, ...props }: TextProps) => {
+	return h(TextBase, {
+		...(type && {
+			as: {
+				inline: "span",
+				block: "div",
+				label: "label",
+			}[type],
+		}),
+		...props,
+	});
+};
+
+export const TextBase = ({
 	content,
 	advancedConfigs,
 	...props
-}: TextProps) => {
+}: TextBaseProps) => {
 	const { accessibility, textEffects, ...advancedConfigurations } =
 		advancedConfigs || {};
 	const { textTransform, textDecoration, textOverflow, wordWrap, wordBreak } =
@@ -49,14 +65,7 @@ export const Text = ({
 	}
 
 	return (
-		<TextBase
-			as={
-				{
-					inline: "span",
-					block: "div",
-					label: "label",
-				}[type || "inline"]
-			}
+		<TextPark
 			style={styles}
 			{...(textTransform && { textTransform: "var(--text-transform)" })}
 			{...(textDecoration && { textDecoration: "var(--text-decoration)" })}
@@ -76,6 +85,6 @@ export const Text = ({
 			{...props}
 		>
 			{content}
-		</TextBase>
+		</TextPark>
 	);
 };
