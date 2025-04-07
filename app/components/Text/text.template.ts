@@ -17,6 +17,10 @@ export const text: Template = {
 					value: "block",
 					label: "Block",
 				},
+				{
+					value: "label",
+					label: "Label (<label>)",
+				},
 			],
 		},
 		{
