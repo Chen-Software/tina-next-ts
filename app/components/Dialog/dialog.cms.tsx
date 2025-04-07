@@ -4,20 +4,21 @@ import { Button, type ButtonProps } from "../Button/button.cms";
 
 export type DialogProps = {
 	__typename: "PageBodyDialog";
-	title?: string | null | undefined;
-	description?: string | null | undefined;
-	confirmButton?: ButtonProps;
-	cancelButton?: ButtonProps;
-	closeButton?: ButtonProps;
-	trigger?: ButtonProps;
+	key?: string;
+	title?: string | null;
+	description?: string | null;
+	confirmButton?: ButtonProps | null;
+	cancelButton?: ButtonProps | null;
+	closeButton?: ButtonProps | null;
+	trigger?: ButtonProps | null;
 	advancedConfigs?: {
-		defaultOpen?: boolean | null | undefined;
-		lazyMount?: boolean | null | undefined;
-		unmountOnExit?: boolean | null | undefined;
+		defaultOpen?: boolean | null;
+		lazyMount?: boolean | null;
+		unmountOnExit?: boolean | null;
 		accessibility?: {
-			ariaLabel?: string | null | undefined;
-		};
-	};
+			ariaLabel?: string | null;
+		} | null;
+	} | null;
 };
 
 export const Dialog = ({
