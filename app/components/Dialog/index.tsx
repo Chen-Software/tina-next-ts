@@ -41,7 +41,7 @@ export const Dialog = ({
 							{confirmButton}
 							{cancelButton && (
 								<DialogBase.CloseTrigger asChild>
-									{defaultCancelButton}
+									{cancelButton}
 								</DialogBase.CloseTrigger>
 							)}
 						</Stack>
