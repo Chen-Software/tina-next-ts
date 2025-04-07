@@ -1,5 +1,6 @@
 "use client";
-import { Button } from "app/components/Button";
+import { Button } from "app/components/Button/button.cms";
+import { Dialog } from "app/components/Dialog/dialog.cms";
 import React, { createElement as h } from "react";
 import { tinaField, useTina } from "tinacms/dist/react";
 import { Box } from "../../styled-system/jsx";
@@ -26,16 +27,10 @@ export default function ClientPage(props: ClientPageProps) {
 		<Box data-tina-field={tinaField(data.page, "body")}>
 			{content?.map((block, index) => {
 				switch (block?.__typename) {
+					case "PageBodyDialog":
+						return <Dialog key={`${index}-${block?.__typename}`} {...block} />;
 					case "PageBodyButton":
-						return (
-							<Button
-								key={`${index}-${block?.__typename}`}
-								variant={block.variant}
-								tooltip={block.tooltip}
-							>
-								{block.label}
-							</Button>
-						);
+						return <Button key={`${index}-${block?.__typename}`} {...block} />;
 				}
 			})}
 		</Box>
