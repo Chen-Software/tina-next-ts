@@ -58,13 +58,24 @@ export const dialog: Template = {
 			fields: [...button.fields],
 		},
 		{
-			type: "boolean",
-			label: "Lazy Mount",
-			name: "lazyMount",
-			description: "Mount the dialog only when it is open.",
+			type: "object",
+			label: "Advanced Configurations",
+			name: "advancedConfigs",
+			description: "Additional configurations for the dialog.",
 			ui: {
-				component: "toggle",
+				component: "group",
 			},
+			fields: [
+				{
+					type: "boolean",
+					label: "Lazy Mount",
+					name: "lazyMount",
+					description: "Mount the dialog only when it is open.",
+					ui: {
+						component: "toggle",
+					},
+				},
+			],
 		},
 	],
 };

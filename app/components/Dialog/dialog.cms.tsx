@@ -8,6 +8,7 @@ export const Dialog = ({
 	cancelButton,
 	closeButton,
 	trigger,
+	advancedConfigs,
 	...props
 }) => {
 	return h(DialogBase, {
@@ -15,6 +16,7 @@ export const Dialog = ({
 		cancelButton: cancelButton && h(Button, cancelButton),
 		closeButton: closeButton && h(Button, closeButton),
 		trigger: trigger && h(Button, trigger),
+		...advancedConfigs,
 		...props,
 	});
 };
