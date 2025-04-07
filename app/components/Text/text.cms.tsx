@@ -7,6 +7,7 @@ export type TextProps = {
 	content?: string | null;
 	advancedConfigs?: {
 		accessibility?: {
+			ariaLabel?: string | null;
 			ariaLevel?: number | null;
 		} | null;
 		textEffects?: {
@@ -61,8 +62,15 @@ export const Text = ({
 			{...(textOverflow && { textOverflow: "var(--text-overflow)" })}
 			{...(wordWrap && { wordWrap: "var(--word-wrap)" })}
 			{...(wordBreak && { wordBreak: "var(--word-break)" })}
-			{...(accessibility?.ariaLevel && { role: "heading" })}
-			{...accessibility}
+			{...{
+				...(accessibility?.ariaLabel && {
+					"aria-label": accessibility?.ariaLabel,
+				}),
+				...(accessibility?.ariaLevel && {
+					role: "heading",
+					"aria-level": accessibility?.ariaLevel,
+				}),
+			}}
 			{...advancedConfigurations}
 			{...props}
 		>

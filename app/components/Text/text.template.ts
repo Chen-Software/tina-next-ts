@@ -347,6 +347,13 @@ export const text: Template = {
 					},
 					fields: [
 						{
+							type: "string",
+							label: "Label (ARIA)",
+							name: "ariaLabel",
+							description:
+								"Human readable label for the text, in event the text is not rendered.",
+						},
+						{
 							type: "number",
 							label: "Level (ARIA)",
 							name: "ariaLevel",
