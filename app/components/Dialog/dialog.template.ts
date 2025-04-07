@@ -68,6 +68,15 @@ export const dialog: Template = {
 			fields: [
 				{
 					type: "boolean",
+					label: "Default Open",
+					name: "defaultOpen",
+					description: "The initial open state of the dialog when rendered.",
+					ui: {
+						component: "toggle",
+					},
+				},
+				{
+					type: "boolean",
 					label: "Lazy Mount",
 					name: "lazyMount",
 					description: "Mount the dialog only when it is open.",
