@@ -114,4 +114,31 @@ export const dialog: Template = {
 			],
 		},
 	],
+	ui: {
+		defaultItem: () => ({
+			title: "Confirmation Dialog",
+			description: "Are you sure that you would like to leave the form?",
+			trigger: {
+				label: "Open Dialog",
+				variant: "solid",
+			},
+			confirmButton: {
+				label: "Confirm",
+				variant: "solid",
+			},
+			cancelButton: {
+				label: "Cancel",
+				variant: "ghost",
+			},
+			closeButton: {
+				label: "×",
+				variant: "ghost",
+			},
+			advancedConfigs: {
+				defaultOpen: false,
+				lazyMount: true,
+				unmountOnExit: false,
+			},
+		}),
+	},
 };
