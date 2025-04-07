@@ -136,4 +136,10 @@ export const text: Template = {
 			],
 		},
 	],
+	ui: {
+		defaultItem: () => ({
+			type: "inline",
+			content: "Text Content",
+		}),
+	},
 };
