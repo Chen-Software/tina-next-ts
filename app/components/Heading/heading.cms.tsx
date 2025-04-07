@@ -7,11 +7,8 @@ export type HeadingProps = {
 	key?: string;
 	content?: string | null;
 	advancedConfigs?: {
-		defaultOpen?: boolean | null;
-		lazyMount?: boolean | null;
-		unmountOnExit?: boolean | null;
 		accessibility?: {
-			ariaLabel?: string | null;
+			ariaLevel?: number | null;
 		} | null;
 	} | null;
 };

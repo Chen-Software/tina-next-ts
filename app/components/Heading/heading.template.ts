@@ -122,6 +122,35 @@ export const heading: Template = {
 				},
 			],
 		},
+		{
+			type: "object",
+			label: "Advanced Configurations",
+			name: "advancedConfigs",
+			description: "Additional configurations for the heading.",
+			ui: {
+				component: "group",
+			},
+			fields: [
+				{
+					type: "object",
+					label: "Accessibility",
+					name: "accessibility",
+					description: "Accessibility options for the heading.",
+					ui: {
+						component: "group",
+					},
+					fields: [
+						{
+							type: "number",
+							label: "Level (ARIA)",
+							name: "ariaLevel",
+							description:
+								"The hierarchical level of the heading within a structure. Levels increase with depth. The value is an integer greater than or equal to 1.",
+						},
+					],
+				},
+			],
+		},
 	],
 	ui: {
 		defaultItem: () => ({
