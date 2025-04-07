@@ -8,6 +8,7 @@ export const text: Template = {
 			type: "string",
 			label: "Type",
 			name: "type",
+			description: "Determines the raw HTML tag.",
 			options: [
 				{
 					value: "inline",
