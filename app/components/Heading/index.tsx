@@ -1,4 +1,17 @@
-import { Heading } from "./heading";
+import { createElement as h } from "react";
+import { Heading as HeadingBase, type HeadingProps } from "./heading";
+
+export const Heading = ({ ariaLevel, ...props }: HeadingProps) => {
+	return h(
+		HeadingBase,
+		{
+			role: "heading",
+			"aria-level": ariaLevel,
+			...props,
+		},
+		props?.children,
+	);
+};
 
 export const H1 = (props) => (
 	<Heading as="h1" size="5xl" {...props}>
