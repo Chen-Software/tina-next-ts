@@ -43,4 +43,10 @@ export const button: Template = {
 			name: "tooltip",
 		},
 	],
+	ui: {
+		defaultItem: () => ({
+			variant: "solid",
+			label: "Click Me",
+		}),
+	},
 };
