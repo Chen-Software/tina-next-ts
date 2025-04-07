@@ -11,11 +11,11 @@ export const text: Template = {
 			options: [
 				{
 					value: "inline",
-					label: "Inline",
+					label: "Inline (<span>)",
 				},
 				{
 					value: "block",
-					label: "Block",
+					label: "Block (<div>)",
 				},
 				{
 					value: "label",
