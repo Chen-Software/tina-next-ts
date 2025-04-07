@@ -123,4 +123,10 @@ export const heading: Template = {
 			],
 		},
 	],
+	ui: {
+		defaultItem: () => ({
+			type: "h1",
+			content: "Heading 1",
+		}),
+	},
 };
