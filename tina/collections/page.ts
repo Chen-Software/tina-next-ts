@@ -1,4 +1,5 @@
 import { dialog } from "app/components/Dialog/dialog.template";
+import { heading } from "app/components/Heading/heading.template";
 import { button } from "../../app/components/Button/button.template";
 
 /**
@@ -16,7 +17,7 @@ export default {
 			type: "object",
 			list: true,
 			isBody: true,
-			templates: [button, dialog],
+			templates: [button, heading, dialog],
 		},
 	],
 	ui: {
