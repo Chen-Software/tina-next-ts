@@ -1,5 +1,6 @@
 import type { Template } from "tinacms";
 import { textEfects } from "./text.advancedConfigs.textEffects.field";
+import { fontWeight } from "./text.fontWeight.field";
 import { fontSize } from "./text.size.field";
 
 export const text: Template = {
@@ -33,34 +34,7 @@ export const text: Template = {
 			description: "Main content.",
 		},
 		fontSize,
-		{
-			type: "string",
-			label: "Font Weight",
-			name: "fontWeight",
-			description: "Text font weight.",
-			options: [
-				{
-					value: "light",
-					label: "Light",
-				},
-				{
-					value: "normal",
-					label: "Normal",
-				},
-				{
-					value: "medium",
-					label: "Medium",
-				},
-				{
-					value: "semibold",
-					label: "Semi-Bold",
-				},
-				{
-					value: "bold",
-					label: "Bold",
-				},
-			],
-		},
+		fontWeight,
 		{
 			type: "object",
 			label: "Advanced Configurations",
