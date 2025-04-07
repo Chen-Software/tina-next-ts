@@ -1,6 +1,6 @@
 "use client";
 import { Button } from "app/components/Button/button.cms";
-import { Dialog } from "app/components/Dialog";
+import { Dialog } from "app/components/Dialog/dialog.cms";
 import React, { createElement as h } from "react";
 import { tinaField, useTina } from "tinacms/dist/react";
 import { Box } from "../../styled-system/jsx";
@@ -27,32 +27,8 @@ export default function ClientPage(props: ClientPageProps) {
 		<Box data-tina-field={tinaField(data.page, "body")}>
 			{content?.map((block, index) => {
 				switch (block?.__typename) {
-					case "PageBodyDialog": {
-						const confirmButton = block.confirmButton && (
-							<Button {...block.confirmButton} />
-						);
-						const cancelButton = block.cancelButton && (
-							<Button {...block.cancelButton} />
-						);
-						const closeButton = block.closeButton && (
-							<Button {...block.closeButton} />
-						);
-						const trigger = block.trigger && <Button {...block.trigger} />;
-
-						return (
-							<Dialog
-								key={`${index}-${block?.__typename}`}
-								title={block.title}
-								description={block.description}
-								lazyMount={block.lazyMount}
-								confirmButton={confirmButton}
-								cancelButton={cancelButton}
-								closeButton={closeButton}
-								trigger={trigger}
-							/>
-						);
-					}
-
+					case "PageBodyDialog":
+						return <Dialog key={`${index}-${block?.__typename}`} {...block} />;
 					case "PageBodyButton":
 						return <Button key={`${index}-${block?.__typename}`} {...block} />;
 				}
