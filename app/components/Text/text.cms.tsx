@@ -1,7 +1,8 @@
-import { createElement as h } from "react";
+import { type JSXElement, createElement as h } from "react";
 import { Text as TextPark } from ".";
 
 export type TextBaseProps = {
+	as?: JSXElement | string | null;
 	content?: string | null;
 	advancedConfigs?: {
 		accessibility?: {
@@ -39,6 +40,7 @@ export const Text = ({ __typename, type, ...props }: TextProps) => {
 };
 
 export const TextBase = ({
+	as = TextPark,
 	content,
 	advancedConfigs,
 	...props
@@ -64,8 +66,10 @@ export const TextBase = ({
 		styles["--word-break"] = wordBreak;
 	}
 
+	const Comp = as;
+
 	return (
-		<TextPark
+		<Comp
 			style={styles}
 			{...(textTransform && { textTransform: "var(--text-transform)" })}
 			{...(textDecoration && { textDecoration: "var(--text-decoration)" })}
@@ -85,6 +89,6 @@ export const TextBase = ({
 			{...props}
 		>
 			{content}
-		</TextPark>
+		</Comp>
 	);
 };

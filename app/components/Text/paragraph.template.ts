@@ -37,3 +37,7 @@ export const paragraph: Template = {
 		}),
 	},
 };
+
+export const paragraphDefaultItem =
+	typeof paragraph.ui?.defaultItem === "function" &&
+	paragraph.ui?.defaultItem();

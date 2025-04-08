@@ -50,3 +50,6 @@ export const button: Template = {
 		}),
 	},
 };
+
+export const buttonDefaultItem =
+	typeof button.ui?.defaultItem === "function" && button.ui?.defaultItem();
