@@ -1,6 +1,6 @@
 import type { Template } from "tinacms";
+import { accessibility } from "../Base/templates/base.advancedConfigs.accessibility.field";
 import { textEfects } from "../Base/templates/base.advancedConfigs.textEffects.field";
-import { accessibility } from "../Text/templates/text.advancedConfigs.accessibility.field";
 import { fontWeight } from "../Text/templates/text.fontWeight.field";
 import { fontSize } from "../Text/templates/text.size.field";
 
