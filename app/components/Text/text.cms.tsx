@@ -7,6 +7,7 @@ export type TextBaseProps = {
 	advancedConfigs?: {
 		accessibility?: {
 			ariaLabel?: string | null;
+			ariaDescription?: string | null;
 			ariaLevel?: number | null;
 		} | null;
 		textEffects?: {
@@ -79,6 +80,9 @@ export const TextBase = ({
 			{...{
 				...(accessibility?.ariaLabel && {
 					"aria-label": accessibility?.ariaLabel,
+				}),
+				...(accessibility?.ariaDescription && {
+					"aria-description": accessibility?.ariaDescription,
 				}),
 				...(accessibility?.ariaLevel && {
 					role: "heading",
