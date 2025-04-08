@@ -55,6 +55,9 @@ export const Stack = ({
 	return (
 		<StackBase
 			direction={direction}
+			aria-orientation={
+				direction?.startsWith("column") ? "vertical" : "horizontal"
+			}
 			gap={gap}
 			style={styles}
 			{...(backgroundColor && { backgroundColor: "var(--background-color)" })}
