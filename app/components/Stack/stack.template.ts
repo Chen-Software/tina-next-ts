@@ -61,7 +61,7 @@ export const stack: Template = {
 		},
 		{
 			type: "object",
-			label: "Children",
+			label: "Content",
 			name: "children",
 			list: true,
 			templates: [button, heading, text, paragraph],
