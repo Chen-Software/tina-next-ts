@@ -17,14 +17,17 @@ export type StackProps = {
 				__typename: string;
 		  } | null)[]
 		| null;
+	advancedConfigs?: {
+		backgroundColor?: string | null;
+		backgroundImage?: string | null;
+	} | null;
 };
 
 export const Stack = ({
 	__typename,
 	direction = "column",
 	children,
-	backgroundColor,
-	backgroundImage,
+	advancedConfigs,
 	...props
 }: StackProps) => {
 	const content = children?.map(
@@ -43,6 +46,8 @@ export const Stack = ({
 		},
 	);
 
+	const { backgroundColor, backgroundImage, ...advancedConfigurations } =
+		advancedConfigs || {};
 	const styles = {};
 	if (backgroundColor) {
 		styles["--background-color"] = backgroundColor;
@@ -71,6 +76,7 @@ export const Stack = ({
 					{content}
 				</StackBase>
 			)}
+			advancedConfigs={advancedConfigurations}
 			{...props}
 		/>
 	);

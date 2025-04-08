@@ -146,18 +146,6 @@ export const stack: Template = {
 			],
 		},
 		{
-			type: "string",
-			label: "Background Color",
-			name: "backgroundColor",
-			description: "The background color of the stack.",
-		},
-		{
-			type: "image",
-			label: "Background Image",
-			name: "backgroundImage",
-			description: "The background image of the stack.",
-		},
-		{
 			type: "object",
 			label: "Advanced Configurations",
 			name: "advancedConfigs",
@@ -165,7 +153,22 @@ export const stack: Template = {
 			ui: {
 				component: "group",
 			},
-			fields: [textEfects, accessibility],
+			fields: [
+				{
+					type: "string",
+					label: "Background Color",
+					name: "backgroundColor",
+					description: "The background color of the stack.",
+				},
+				{
+					type: "image",
+					label: "Background Image",
+					name: "backgroundImage",
+					description: "The background image of the stack.",
+				},
+				textEfects,
+				accessibility,
+			],
 		},
 	],
 };
