@@ -14,7 +14,14 @@ export const accessibility: TinaField = {
 			label: "Label (ARIA)",
 			name: "ariaLabel",
 			description:
-				"Human readable label for the text, in event the text is not rendered.",
+				"Human readable label for the text, in the event the text is not rendered.",
+		},
+		{
+			type: "string",
+			label: "Description (ARIA)",
+			name: "ariaDescription",
+			description:
+				"Human readable context and information associated with the text, in the event a visible description is not rendered.",
 		},
 		{
 			type: "number",
