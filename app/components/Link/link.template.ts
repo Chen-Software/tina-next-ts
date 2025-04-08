@@ -76,6 +76,7 @@ export const link: Template = {
 		defaultItem: () => ({
 			type: "a",
 			label: "Go to…",
+			href: "https://example.com",
 		}),
 	},
 };
