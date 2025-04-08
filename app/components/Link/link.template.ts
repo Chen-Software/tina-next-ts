@@ -31,6 +31,12 @@ export const link: Template = {
 		},
 		{
 			type: "string",
+			label: "Link to (URL)",
+			name: "href",
+			description: "The target URL the link goes to.",
+		},
+		{
+			type: "string",
 			label: "Target",
 			name: "target",
 			description: "Where to open the linked document.",
