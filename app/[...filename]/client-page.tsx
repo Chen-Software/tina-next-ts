@@ -2,6 +2,7 @@
 import { Button } from "app/components/Button/button.cms";
 import { Dialog } from "app/components/Dialog/dialog.cms";
 import { Heading } from "app/components/Heading/heading.cms";
+import { Stack } from "app/components/Stack/stack.cms";
 import { Paragraph } from "app/components/Text/paragraph.cms";
 import { Text } from "app/components/Text/text.cms";
 import React, { createElement as h } from "react";
@@ -42,6 +43,8 @@ export default function ClientPage(props: ClientPageProps) {
 						);
 					case "PageBodyButton":
 						return <Button key={`${index}-${block?.__typename}`} {...block} />;
+					case "PageBodyStack":
+						return <Stack key={`${index}-${block?.__typename}`} {...block} />;
 				}
 			})}
 		</Box>

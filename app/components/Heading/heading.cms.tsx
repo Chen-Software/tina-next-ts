@@ -1,6 +1,6 @@
 import { createElement as h } from "react";
 import { H1, H2, H3, H4, H5, H6 } from ".";
-import { TextBase } from "../Text/text.cms";
+import { Base } from "../Base/base.cms";
 
 export type HeadingProps = {
 	__typename: string;
@@ -10,7 +10,7 @@ export type HeadingProps = {
 };
 
 export const Heading = ({ __typename, type, ...props }: HeadingProps) =>
-	h(TextBase, {
+	h(Base, {
 		as: {
 			h1: H1,
 			h2: H2,

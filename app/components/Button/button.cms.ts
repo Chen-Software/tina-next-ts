@@ -1,5 +1,6 @@
 import { createElement as h } from "react";
 import { Button as ButtonBase } from ".";
+import { Base } from "../Base/base.cms";
 
 export type ButtonProps = {
 	__typename: string;
@@ -10,4 +11,8 @@ export type ButtonProps = {
 };
 
 export const Button = ({ __typename, label, ...props }: ButtonProps) =>
-	h(ButtonBase, props, label);
+	h(Base, {
+		as: ({ children, ...restOfProps }) => h(ButtonBase, restOfProps, children),
+		content: label,
+		...props,
+	});
