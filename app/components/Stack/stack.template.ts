@@ -1,7 +1,7 @@
 import type { Template } from "tinacms";
-import { button } from "../Button/button.template";
-import { heading } from "../Heading/heading.template";
-import { paragraph } from "../Text/paragraph.template";
+import { button, buttonDefaultItem } from "../Button/button.template";
+import { heading, headingDefaultItem } from "../Heading/heading.template";
+import { paragraph, paragraphDefaultItem } from "../Text/paragraph.template";
 import { accessibility } from "../Text/templates/text.advancedConfigs.accessibility.field";
 import { textEfects } from "../Text/templates/text.advancedConfigs.textEffects.field";
 import { text } from "../Text/text.template";
@@ -171,4 +171,16 @@ export const stack: Template = {
 			],
 		},
 	],
+	ui: {
+		defaultItem: () => ({
+			children: [
+				{ _template: "heading", ...headingDefaultItem },
+				{ _template: "paragraph", ...paragraphDefaultItem },
+				{ _template: "button", ...buttonDefaultItem },
+			],
+			direction: "column",
+			gap: 1,
+			align: "center",
+		}),
+	},
 };
