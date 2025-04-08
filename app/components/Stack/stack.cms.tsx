@@ -43,16 +43,22 @@ export const Stack = ({
 			}
 		},
 	);
+
+	const styles = {};
+	if (backgroundColor) {
+		styles["--background-color"] = backgroundColor;
+	}
+	if (backgroundImage) {
+		styles["--background-image"] = `url(${backgroundImage})`;
+	}
+
 	return (
 		<StackBase
 			direction={direction}
 			gap={gap}
-			backgroundColor="var(--background-color)"
-			backgroundImage="var(--background-image)"
-			style={{
-				"--background-color": backgroundColor,
-				"--background-image": backgroundImage && `url(${backgroundImage})`,
-			}}
+			style={styles}
+			{...(backgroundColor && { backgroundColor: "var(--background-color)" })}
+			{...(backgroundImage && { backgroundImage: "var(--background-image)" })}
 			{...props}
 		>
 			{content}
