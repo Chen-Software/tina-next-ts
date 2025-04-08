@@ -1,4 +1,6 @@
 import type { Template } from "tinacms";
+import { accessibility } from "../Base/templates/base.advancedConfigs.accessibility.field";
+import { textEfects } from "../Base/templates/base.advancedConfigs.textEffects.field";
 
 export const button: Template = {
 	name: "button",
@@ -41,6 +43,14 @@ export const button: Template = {
 			type: "string",
 			label: "Tooltip",
 			name: "tooltip",
+		},
+		{
+			type: "object",
+			label: "Advanced Configurations",
+			name: "advancedConfigs",
+			description: "Additional configurations for the button.",
+			ui: { component: "group" },
+			fields: [textEfects, accessibility],
 		},
 	],
 	ui: {
