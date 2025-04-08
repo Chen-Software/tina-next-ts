@@ -65,3 +65,6 @@ export const heading: Template = {
 		}),
 	},
 };
+
+export const headingDefaultItem =
+	typeof heading.ui?.defaultItem === "function" && heading.ui?.defaultItem();
