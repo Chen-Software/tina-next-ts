@@ -11,11 +11,14 @@ export type LinkProps = {
 	content?: string | null;
 };
 
-export const Link = ({ __typename, type, label, ...props }: LinkProps) => {
-	return h(TextBase, {
-		as: ({ children, href, ...p }) =>
-			h(LinkBase, { as: type, href: href || "", ...p }, children),
-		content: label,
-		...props,
-	});
+export const Link = ({
+	__typename,
+	type,
+	label,
+	href,
+	...props
+}: LinkProps) => {
+	const as = ({ children, ...p }) =>
+		h(LinkBase, { as: type, href: href || "", ...p }, children);
+	return h(TextBase, { as, content: label, ...props });
 };
