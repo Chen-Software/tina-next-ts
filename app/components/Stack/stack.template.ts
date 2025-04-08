@@ -1,9 +1,9 @@
 import type { Template } from "tinacms";
+import { accessibility } from "../Base/templates/base.advancedConfigs.accessibility.field";
+import { textEfects } from "../Base/templates/base.advancedConfigs.textEffects.field";
 import { button, buttonDefaultItem } from "../Button/button.template";
 import { heading, headingDefaultItem } from "../Heading/heading.template";
 import { paragraph, paragraphDefaultItem } from "../Text/paragraph.template";
-import { accessibility } from "../Text/templates/text.advancedConfigs.accessibility.field";
-import { textEfects } from "../Text/templates/text.advancedConfigs.textEffects.field";
 import { text } from "../Text/text.template";
 
 export const stack: Template = {

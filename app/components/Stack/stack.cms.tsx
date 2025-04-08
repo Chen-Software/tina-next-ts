@@ -1,8 +1,9 @@
 import { Stack as StackBase } from ".";
+import { Base } from "../Base/base.cms";
 import { Button } from "../Button/button.cms";
 import { Heading } from "../Heading/heading.cms";
 import { Paragraph } from "../Text/paragraph.cms";
-import { Text, TextBase } from "../Text/text.cms";
+import { Text } from "../Text/text.cms";
 
 export type StackProps = {
 	__typename: string;
@@ -57,7 +58,7 @@ export const Stack = ({
 	}
 
 	return (
-		<TextBase
+		<Base
 			as={({ style, ...p }) => (
 				<StackBase
 					direction={direction}
@@ -77,6 +78,7 @@ export const Stack = ({
 				</StackBase>
 			)}
 			advancedConfigs={advancedConfigurations}
+			__typename={__typename}
 			{...props}
 		/>
 	);

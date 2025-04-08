@@ -1,6 +1,6 @@
 import { createElement as h } from "react";
 import { Paragraph as ParagraphBase } from ".";
-import { TextBase } from "./text.cms";
+import { Base } from "../Base/base.cms";
 
 export type ParagraphProps = {
 	__typename: string;
@@ -9,7 +9,7 @@ export type ParagraphProps = {
 };
 
 export const Paragraph = ({ __typename, ...props }: ParagraphProps) => {
-	return h(TextBase, {
+	return h(Base, {
 		as: ParagraphBase,
 		...props,
 	});
