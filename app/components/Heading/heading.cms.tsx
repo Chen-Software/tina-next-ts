@@ -3,7 +3,7 @@ import { H1, H2, H3, H4, H5, H6 } from ".";
 import { TextBase } from "../Text/text.cms";
 
 export type HeadingProps = {
-	__typename: "PageBodyHeading";
+	__typename: string;
 	type?: string | null;
 	key?: string;
 	content?: string | null;
