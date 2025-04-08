@@ -9,6 +9,14 @@ export const stack: Template = {
 	label: "Stack",
 	fields: [
 		{
+			type: "object",
+			label: "Content",
+			name: "children",
+			description: "Main content inside the stack.",
+			list: true,
+			templates: [button, heading, text, paragraph],
+		},
+		{
 			type: "string",
 			label: "Direction",
 			name: "direction",
@@ -58,13 +66,6 @@ export const stack: Template = {
 			label: "Background Image",
 			name: "backgroundImage",
 			description: "The background image of the stack.",
-		},
-		{
-			type: "object",
-			label: "Content",
-			name: "children",
-			list: true,
-			templates: [button, heading, text, paragraph],
 		},
 	],
 };
