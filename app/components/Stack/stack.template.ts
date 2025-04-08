@@ -2,6 +2,8 @@ import type { Template } from "tinacms";
 import { button } from "../Button/button.template";
 import { heading } from "../Heading/heading.template";
 import { paragraph } from "../Text/paragraph.template";
+import { accessibility } from "../Text/templates/text.advancedConfigs.accessibility.field";
+import { textEfects } from "../Text/templates/text.advancedConfigs.textEffects.field";
 import { text } from "../Text/text.template";
 
 export const stack: Template = {
@@ -154,6 +156,16 @@ export const stack: Template = {
 			label: "Background Image",
 			name: "backgroundImage",
 			description: "The background image of the stack.",
+		},
+		{
+			type: "object",
+			label: "Advanced Configurations",
+			name: "advancedConfigs",
+			description: "Additional configurations for the heading.",
+			ui: {
+				component: "group",
+			},
+			fields: [textEfects, accessibility],
 		},
 	],
 };

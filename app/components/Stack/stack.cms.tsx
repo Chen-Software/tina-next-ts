@@ -2,7 +2,7 @@ import { Stack as StackBase } from ".";
 import { Button } from "../Button/button.cms";
 import { Heading } from "../Heading/heading.cms";
 import { Paragraph } from "../Text/paragraph.cms";
-import { Text } from "../Text/text.cms";
+import { Text, TextBase } from "../Text/text.cms";
 
 export type StackProps = {
 	__typename: string;
@@ -22,7 +22,6 @@ export type StackProps = {
 export const Stack = ({
 	__typename,
 	direction = "column",
-	gap,
 	children,
 	backgroundColor,
 	backgroundImage,
@@ -53,18 +52,26 @@ export const Stack = ({
 	}
 
 	return (
-		<StackBase
-			direction={direction}
-			aria-orientation={
-				direction?.startsWith("column") ? "vertical" : "horizontal"
-			}
-			gap={gap}
-			style={styles}
-			{...(backgroundColor && { backgroundColor: "var(--background-color)" })}
-			{...(backgroundImage && { backgroundImage: "var(--background-image)" })}
+		<TextBase
+			as={({ style, ...p }) => (
+				<StackBase
+					direction={direction}
+					aria-orientation={
+						direction?.startsWith("column") ? "vertical" : "horizontal"
+					}
+					style={{ ...style, ...styles }}
+					{...(backgroundColor && {
+						backgroundColor: "var(--background-color)",
+					})}
+					{...(backgroundImage && {
+						backgroundImage: "var(--background-image)",
+					})}
+					{...p}
+				>
+					{content}
+				</StackBase>
+			)}
 			{...props}
-		>
-			{content}
-		</StackBase>
+		/>
 	);
 };
