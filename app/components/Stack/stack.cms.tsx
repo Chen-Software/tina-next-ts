@@ -28,19 +28,21 @@ export const Stack = ({
 	backgroundImage,
 	...props
 }: StackProps) => {
-	const content = children?.map((child, i) => {
-		const { __typename: typename } = child;
-		switch (typename) {
-			case "PageBodyStackChildrenHeading":
-				return <Heading key={`-${i}-${typename}`} {...child} />;
-			case "PageBodyStackChildrenText":
-				return <Text key={`-${i}-${typename}`} {...child} />;
-			case "PageBodyStackChildrenParagraph":
-				return <Paragraph key={`-${i}-${typename}`} {...child} />;
-			case "PageBodyStackChildrenButton":
-				return <Button key={`-${i}-${typename}`} {...child} />;
-		}
-	});
+	const content = children?.map(
+		(child: { __typename: string; [k: string]: unknown | null }, i) => {
+			const typename = child?.__typename;
+			switch (typename) {
+				case "PageBodyStackChildrenHeading":
+					return <Heading key={`-${i}-${typename}`} {...child} />;
+				case "PageBodyStackChildrenText":
+					return <Text key={`-${i}-${typename}`} {...child} />;
+				case "PageBodyStackChildrenParagraph":
+					return <Paragraph key={`-${i}-${typename}`} {...child} />;
+				case "PageBodyStackChildrenButton":
+					return <Button key={`-${i}-${typename}`} {...child} />;
+			}
+		},
+	);
 	return (
 		<StackBase
 			direction={direction}
