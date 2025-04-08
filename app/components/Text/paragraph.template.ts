@@ -13,6 +13,9 @@ export const paragraph: Template = {
 			label: "Content",
 			name: "content",
 			description: "Main content.",
+			ui: {
+				component: "textarea",
+			},
 		},
 		fontSize,
 		fontWeight,
