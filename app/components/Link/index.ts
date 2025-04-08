@@ -5,11 +5,7 @@ import { Link as LinkBase, type LinkProps as LinkBaseProps } from "./link";
 export const Link = React.forwardRef<LinkProps>(({ ...props }, ref) => {
 	return h(
 		LinkBase,
-		{
-			...props,
-			asChild: true,
-			ref,
-		},
+		{ asChild: true },
 		h(NextLink, { ref, ...props }, props.children),
 	);
 });
