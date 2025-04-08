@@ -21,7 +21,7 @@ export type StackProps = {
 
 export const Stack = ({
 	__typename,
-	direction,
+	direction = "column",
 	gap,
 	children,
 	backgroundColor,
