@@ -2,14 +2,10 @@ import NextLink, { type LinkProps as NextLinkProps } from "next/link";
 import React, { createElement as h } from "react";
 import { Link as LinkBase, type LinkProps as LinkBaseProps } from "./link";
 
-const Link = React.forwardRef<LinkProps>(({ ...props }, ref) => {
+export const Link = React.forwardRef<LinkProps>(({ ...props }, ref) => {
 	return h(
 		LinkBase,
-		{
-			...props,
-			asChild: true,
-			ref,
-		},
+		{ asChild: true },
 		h(NextLink, { ref, ...props }, props.children),
 	);
 });

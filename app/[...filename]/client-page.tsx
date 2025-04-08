@@ -2,6 +2,7 @@
 import { Button } from "app/components/Button/button.cms";
 import { Dialog } from "app/components/Dialog/dialog.cms";
 import { Heading } from "app/components/Heading/heading.cms";
+import { Link } from "app/components/Link/link.cms";
 import { Paragraph } from "app/components/Text/paragraph.cms";
 import { Text } from "app/components/Text/text.cms";
 import React, { createElement as h } from "react";
@@ -36,6 +37,8 @@ export default function ClientPage(props: ClientPageProps) {
 						return <Heading key={`${index}-${block?.__typename}`} {...block} />;
 					case "PageBodyText":
 						return <Text key={`${index}-${block?.__typename}`} {...block} />;
+					case "PageBodyLink":
+						return <Link key={`${index}-${block?.__typename}`} {...block} />;
 					case "PageBodyParagraph":
 						return (
 							<Paragraph key={`${index}-${block?.__typename}`} {...block} />
