@@ -105,6 +105,46 @@ export const stack: Template = {
 		},
 		{
 			type: "string",
+			label: "Justify",
+			name: "justify",
+			description: "An alias for the css `justify-content` property.",
+			options: [
+				{
+					value: "flex-start",
+					label: "Start of Stack",
+				},
+				{
+					value: "flex-end",
+					label: "End of Stack",
+				},
+				{
+					value: "center",
+					label: "Center",
+				},
+				{
+					value: "space-between",
+					label: "Space Between",
+				},
+				{
+					value: "space-around",
+					label: "Space Around",
+				},
+				{
+					value: "space-evenly",
+					label: "Space Evenly",
+				},
+				{
+					value: "initial",
+					label: "Initial",
+				},
+				{
+					value: "inherit",
+					label: "Inherit",
+				},
+			],
+		},
+		{
+			type: "string",
 			label: "Background Color",
 			name: "backgroundColor",
 			description: "The background color of the stack.",
