@@ -57,6 +57,54 @@ export const stack: Template = {
 		},
 		{
 			type: "string",
+			label: "Align",
+			name: "align",
+			description: "An alias for the css `align-items` property.",
+			options: [
+				{
+					value: "normal",
+					label: "Normal",
+				},
+				{
+					value: "stretch",
+					label: "Stretch",
+				},
+				{
+					value: "center",
+					label: "Center",
+				},
+				{
+					value: "flex-start",
+					label: "Start of Stack",
+				},
+				{
+					value: "flex-end",
+					label: "End of Stack",
+				},
+				{
+					value: "start",
+					label: "Start of Each",
+				},
+				{
+					value: "end",
+					label: "End of Each",
+				},
+				{
+					value: "baseline",
+					label: "Baseline",
+				},
+				{
+					value: "initial",
+					label: "Initial",
+				},
+				{
+					value: "inherit",
+					label: "Inherit",
+				},
+			],
+		},
+		{
+			type: "string",
 			label: "Background Color",
 			name: "backgroundColor",
 			description: "The background color of the stack.",
