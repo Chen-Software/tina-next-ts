@@ -1,3 +1,4 @@
+import { accordion } from "app/components/Accordion/accordion.template";
 import { dialog } from "app/components/Dialog/dialog.template";
 import { heading } from "app/components/Heading/heading.template";
 import { stack } from "app/components/Stack/stack.template";
@@ -20,7 +21,7 @@ export default {
 			type: "object",
 			list: true,
 			isBody: true,
-			templates: [button, heading, text, paragraph, dialog, stack],
+			templates: [accordion, button, heading, text, paragraph, dialog, stack],
 		},
 	],
 	ui: {

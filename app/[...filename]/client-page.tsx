@@ -1,4 +1,5 @@
 "use client";
+import { Accordion } from "app/components/Accordion/accordion.cms";
 import { Button } from "app/components/Button/button.cms";
 import { Dialog } from "app/components/Dialog/dialog.cms";
 import { Heading } from "app/components/Heading/heading.cms";
@@ -31,6 +32,10 @@ export default function ClientPage(props: ClientPageProps) {
 		<Box data-tina-field={tinaField(data.page, "body")}>
 			{content?.map((block, index) => {
 				switch (block?.__typename) {
+					case "PageBodyAccordion":
+						return (
+							<Accordion key={`${index}-${block?.__typename}`} {...block} />
+						);
 					case "PageBodyDialog":
 						return <Dialog key={`${index}-${block?.__typename}`} {...block} />;
 					case "PageBodyHeading":

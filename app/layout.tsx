@@ -4,6 +4,7 @@ import Link from "./components/Link";
 import "./styles/globals.css";
 import global from "../content/global/index.json";
 import { Box } from "../styled-system/jsx";
+import { Demo } from "./components/Accordion";
 
 export default function RootLayout({
 	children,
@@ -42,6 +43,7 @@ export default function RootLayout({
 					])}
 				</Box>
 			</Box>
+			<Demo />
 			<main>{children}</main>
 		</Box>,
 	);
