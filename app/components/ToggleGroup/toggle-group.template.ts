@@ -83,6 +83,12 @@ export const toggleGroup: Template = {
 			fields: [
 				{
 					type: "boolean",
+					label: "Loop Focus",
+					name: "loopFocus",
+					description: "Whether to loop focus inside the toggle group.",
+				},
+				{
+					type: "boolean",
 					label: "Roving Focus",
 					name: "rovingFocus",
 					description: "Whether to use roving tab index to manage focus.",
