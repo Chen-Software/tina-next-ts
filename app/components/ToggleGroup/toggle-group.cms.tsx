@@ -51,7 +51,12 @@ export const ToggleGroup = ({
 		);
 	});
 	return h(Base, {
-		as: ({ children: c, ...props }) => h(ToggleGroupBase.Root, props, content),
+		as: ({ children: c, defaultValue, ...props }) =>
+			h(
+				ToggleGroupBase.Root,
+				{ defaultValue: [defaultValue], ...props },
+				content,
+			),
 		...props,
 	});
 };

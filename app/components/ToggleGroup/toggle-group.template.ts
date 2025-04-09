@@ -67,6 +67,12 @@ export const toggleGroup: Template = {
 			],
 		},
 		{
+			type: "string",
+			label: "Default Value",
+			name: "defaultValue",
+			description: "Initial value of the toggle group.",
+		},
+		{
 			type: "boolean",
 			label: "Roving Focus",
 			name: "rovingFocus",
@@ -86,6 +92,7 @@ export const toggleGroup: Template = {
 	ui: {
 		defaultItem: () => ({
 			multiple: true,
+			defaultValue: "b",
 			children: [
 				{
 					_template: "toggleGroupItem",
