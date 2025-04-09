@@ -5,6 +5,7 @@ import { button, buttonDefaultItem } from "../Button/button.template";
 import { heading, headingDefaultItem } from "../Heading/heading.template";
 import { paragraph, paragraphDefaultItem } from "../Text/paragraph.template";
 import { text } from "../Text/text.template";
+import { toggleGroup } from "../ToggleGroup/toggle-group.template";
 
 export const stack: Template = {
 	name: "stack",
@@ -16,7 +17,7 @@ export const stack: Template = {
 			name: "children",
 			description: "Main content inside the stack.",
 			list: true,
-			templates: [button, heading, text, paragraph],
+			templates: [button, toggleGroup, heading, text, paragraph],
 		},
 		{
 			type: "string",
