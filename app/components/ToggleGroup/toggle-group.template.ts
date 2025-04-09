@@ -73,12 +73,6 @@ export const toggleGroup: Template = {
 			description: "Initial value of the toggle group.",
 		},
 		{
-			type: "boolean",
-			label: "Roving Focus",
-			name: "rovingFocus",
-			description: "Whether to use roving tab index to manage focus.",
-		},
-		{
 			type: "object",
 			label: "Advanced Configurations",
 			name: "advancedConfigs",
@@ -86,7 +80,16 @@ export const toggleGroup: Template = {
 			ui: {
 				component: "group",
 			},
-			fields: [textEfects, accessibility],
+			fields: [
+				{
+					type: "boolean",
+					label: "Roving Focus",
+					name: "rovingFocus",
+					description: "Whether to use roving tab index to manage focus.",
+				},
+				textEfects,
+				accessibility,
+			],
 		},
 	],
 	ui: {
