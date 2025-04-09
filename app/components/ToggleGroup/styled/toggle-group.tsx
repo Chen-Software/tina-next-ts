@@ -15,7 +15,7 @@ export const RootProvider = withProvider<
 	HTMLDivElement,
 	Assign<
 		Assign<HTMLStyledProps<"div">, ToggleGroup.RootProviderBaseProps>,
-		ToggleGroupVariantProps
+		ToggleGroupVariantProps & { className?: string }
 	>
 >(ToggleGroup.RootProvider, "root");
 
@@ -24,7 +24,7 @@ export const Root = withProvider<
 	HTMLDivElement,
 	Assign<
 		Assign<HTMLStyledProps<"div">, ToggleGroup.RootBaseProps>,
-		ToggleGroupVariantProps
+		ToggleGroupVariantProps & { className?: string }
 	>
 >(ToggleGroup.Root, "root");
 
