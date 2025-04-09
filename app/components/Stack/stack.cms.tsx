@@ -4,6 +4,7 @@ import { Button } from "../Button/button.cms";
 import { Heading } from "../Heading/heading.cms";
 import { Paragraph } from "../Text/paragraph.cms";
 import { Text } from "../Text/text.cms";
+import { ToggleGroup } from "../ToggleGroup/toggle-group.cms";
 
 export type StackProps = {
 	__typename: string;
@@ -43,6 +44,8 @@ export const Stack = ({
 					return <Paragraph key={`-${i}-${typename}`} {...child} />;
 				case "PageBodyStackChildrenButton":
 					return <Button key={`-${i}-${typename}`} {...child} />;
+				case "PageBodyStackChildrenToggleGroup":
+					return <ToggleGroup key={`-${i}-${typename}`} {...child} />;
 			}
 		},
 	);

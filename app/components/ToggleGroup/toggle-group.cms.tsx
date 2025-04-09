@@ -34,7 +34,10 @@ export const ToggleGroup = ({
 		const { __typename } = item?.children?.[0] || { _template: "" };
 
 		const children =
-			__typename === "PageBodyToggleGroupChildrenToggleGroupItemChildrenText" &&
+			[
+				"PageBodyToggleGroupChildrenToggleGroupItemChildrenText",
+				"PageBodyStackChildrenToggleGroupChildrenToggleGroupItemChildrenText",
+			].includes(__typename || "") &&
 			h(Text, {
 				key: `${key}-TglGrp-${i}-${item?.value}-text`,
 				content: item?.children?.[0]?.content || null,
