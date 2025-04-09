@@ -5,6 +5,7 @@ import { Heading } from "app/components/Heading/heading.cms";
 import { Stack } from "app/components/Stack/stack.cms";
 import { Paragraph } from "app/components/Text/paragraph.cms";
 import { Text } from "app/components/Text/text.cms";
+import { ToggleGroup } from "app/components/ToggleGroup/toggle-group.cms";
 import React, { createElement as h } from "react";
 import { tinaField, useTina } from "tinacms/dist/react";
 import { Box } from "../../styled-system/jsx";
@@ -43,6 +44,10 @@ export default function ClientPage(props: ClientPageProps) {
 						);
 					case "PageBodyButton":
 						return <Button key={`${index}-${block?.__typename}`} {...block} />;
+					case "PageBodyToggleGroup":
+						return (
+							<ToggleGroup key={`${index}-${block?.__typename}`} {...block} />
+						);
 					case "PageBodyStack":
 						return <Stack key={`${index}-${block?.__typename}`} {...block} />;
 				}
