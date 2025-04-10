@@ -4,7 +4,7 @@ import {
 	isCssProperty,
 	styled,
 } from "@chen/design-system/jsx";
-import {
+import React, {
 	type ElementType,
 	type ForwardRefExoticComponent,
 	type PropsWithoutRef,
