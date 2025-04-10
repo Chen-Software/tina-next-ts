@@ -1,0 +1,55 @@
+{
+  "name": "@chen/design-system",
+  "version": "0.0.1",
+  "private": true,
+  "files": [
+    "types",
+    "css",
+    "jsx",
+    "patterns",
+    "recipes",
+    "tokens",
+    "helpers.mjs",
+    "styles.css"
+  ],
+  "scripts": {
+    "build": "panda"
+  },
+  "devDependencies": {
+    "@pandacss/dev": "^0.53.3",
+    "@park-ui/panda-preset": "^0.43.1"
+  },
+  "exports": {
+    "./css": {
+      "types": "./css/index.d.ts",
+      "require": "./css/index.mjs",
+      "import": "./css/index.mjs"
+    },
+    "./tokens": {
+      "types": "./tokens/index.d.ts",
+      "require": "./tokens/index.mjs",
+      "import": "./tokens/index.mjs"
+    },
+    "./types": {
+      "types": "./types/index.d.ts",
+      "require": "./types/index.mjs",
+      "import": "./types/index.mjs"
+    },
+    "./patterns": {
+      "types": "./patterns/index.d.ts",
+      "require": "./patterns/index.mjs",
+      "import": "./patterns/index.mjs"
+    },
+    "./recipes": {
+      "types": "./recipes/index.d.ts",
+      "require": "./recipes/index.mjs",
+      "import": "./recipes/index.mjs"
+    },
+    "./jsx": {
+      "types": "./jsx/index.d.ts",
+      "require": "./jsx/index.mjs",
+      "import": "./jsx/index.mjs"
+    },
+    "./styles.css": "./styles.css"
+  }
+}
