@@ -1,4 +1,5 @@
 "use client";
+import { Box, Flex } from "@chen/design-system/jsx";
 import { Breadcrumbs } from "app/components/Breadcrumbs";
 import { Button } from "app/components/Button";
 import { Code } from "app/components/Code";
@@ -8,7 +9,6 @@ import { Paragraph } from "app/components/Text";
 import Link from "next/link";
 import { tinaField, useTina } from "tinacms/dist/react";
 import { TinaMarkdown } from "tinacms/dist/rich-text";
-import { Box, Flex } from "../../../styled-system/jsx";
 import type {
 	PostConnectionQuery,
 	PostQuery,

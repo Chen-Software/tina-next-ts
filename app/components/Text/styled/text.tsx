@@ -1,6 +1,9 @@
-import { styled } from "styled-system/jsx";
-import { type TextVariantProps, text } from "styled-system/recipes";
-import type { ComponentProps, StyledComponent } from "styled-system/types";
+import { styled } from "@chen/design-system/jsx";
+import { type TextVariantProps, text } from "@chen/design-system/recipes";
+import type {
+	ComponentProps,
+	StyledComponent,
+} from "@chen/design-system/types";
 
 type ParagraphProps = TextVariantProps & { as?: React.ElementType };
 

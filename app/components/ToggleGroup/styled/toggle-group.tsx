@@ -4,8 +4,11 @@ import { ToggleGroup } from "@ark-ui/react/toggle-group";
 import {
 	type ToggleGroupVariantProps,
 	toggleGroup,
-} from "styled-system/recipes";
-import type { ComponentProps, HTMLStyledProps } from "styled-system/types";
+} from "@chen/design-system/recipes";
+import type {
+	ComponentProps,
+	HTMLStyledProps,
+} from "@chen/design-system/types";
 import { createStyleContext } from "./utils/create-style-context";
 
 const { withProvider, withContext } = createStyleContext(toggleGroup);

@@ -1,3 +1,9 @@
+import { cx } from "@chen/design-system/css";
+import {
+	type StyledComponent,
+	isCssProperty,
+	styled,
+} from "@chen/design-system/jsx";
 import {
 	type ElementType,
 	type ForwardRefExoticComponent,
@@ -7,8 +13,6 @@ import {
 	forwardRef,
 	useContext,
 } from "react";
-import { cx } from "styled-system/css";
-import { type StyledComponent, isCssProperty, styled } from "styled-system/jsx";
 
 type Props = Record<string, unknown>;
 type Recipe = {

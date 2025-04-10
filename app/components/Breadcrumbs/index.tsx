@@ -1,5 +1,5 @@
+import { Box, Flex } from "@chen/design-system/jsx";
 import React, { createElement as h } from "react";
-import { Box, Flex } from "styled-system/jsx";
 
 export const Breadcrumbs = ({ children, ...props }) => {
 	return (

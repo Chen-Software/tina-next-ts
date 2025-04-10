@@ -2,8 +2,11 @@
 import type { Assign } from "@ark-ui/react/";
 import { Dialog } from "@ark-ui/react/dialog";
 import { ark } from "@ark-ui/react/factory";
-import { type DrawerVariantProps, drawer } from "styled-system/recipes";
-import type { ComponentProps, HTMLStyledProps } from "styled-system/types";
+import { type DrawerVariantProps, drawer } from "@chen/design-system/recipes";
+import type {
+	ComponentProps,
+	HTMLStyledProps,
+} from "@chen/design-system/types";
 import { createStyleContext } from "./utils/create-style-context";
 
 const { withRootProvider, withContext } = createStyleContext(drawer);

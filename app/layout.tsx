@@ -2,8 +2,8 @@ import type React from "react";
 import { createElement as h } from "react";
 import Link from "./components/Link";
 import "./styles/globals.css";
+import { Box } from "@chen/design-system/jsx";
 import global from "../content/global/index.json";
-import { Box } from "../styled-system/jsx";
 
 export default function RootLayout({
 	children,

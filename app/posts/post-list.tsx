@@ -1,7 +1,7 @@
 "use client";
+import { Box } from "@chen/design-system/jsx";
 import { usePathname } from "next/navigation";
 import React from "react";
-import { Box } from "../../styled-system/jsx";
 import Link from "../components/Link";
 
 export default function PostList({ sidebarMode = false, ...props }) {

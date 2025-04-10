@@ -1,4 +1,5 @@
 "use client";
+import { Box } from "@chen/design-system/jsx";
 import { Button } from "app/components/Button/button.cms";
 import { Dialog } from "app/components/Dialog/dialog.cms";
 import { Heading } from "app/components/Heading/heading.cms";
@@ -8,7 +9,6 @@ import { Text } from "app/components/Text/text.cms";
 import { ToggleGroup } from "app/components/ToggleGroup/toggle-group.cms";
 import React, { createElement as h } from "react";
 import { tinaField, useTina } from "tinacms/dist/react";
-import { Box } from "../../styled-system/jsx";
 import type { PageQuery } from "../../tina/__generated__/types";
 
 interface ClientPageProps {

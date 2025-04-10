@@ -1,4 +1,4 @@
-import { Stack } from "styled-system/jsx";
+import { Stack } from "@chen/design-system/jsx";
 import { Button } from "../Button";
 import { Dialog as DialogBase } from "./dialog";
 
