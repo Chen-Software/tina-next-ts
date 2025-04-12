@@ -1,11 +1,11 @@
 "use client";
-import { Button } from "app/components/Button/button.cms";
-import { Dialog } from "app/components/Dialog/dialog.cms";
-import { Heading } from "app/components/Heading/heading.cms";
-import { Stack } from "app/components/Stack/stack.cms";
-import { Paragraph } from "app/components/Text/paragraph.cms";
-import { Text } from "app/components/Text/text.cms";
-import { ToggleGroup } from "app/components/ToggleGroup/toggle-group.cms";
+import { Button } from "@chen/ui-components/cms";
+import { Dialog } from "@chen/ui-components/cms";
+import { Heading } from "@chen/ui-components/cms";
+import { Stack } from "@chen/ui-components/cms";
+import { Paragraph } from "@chen/ui-components/cms";
+import { Text } from "@chen/ui-components/cms";
+import { ToggleGroup } from "@chen/ui-components/cms";
 import React, { createElement as h } from "react";
 import { tinaField, useTina } from "tinacms/dist/react";
 import { Box } from "../../styled-system/jsx";

@@ -1,8 +1,8 @@
 "use client";
+import Link from "@chen/ui-components";
 import { usePathname } from "next/navigation";
 import React from "react";
 import { Box } from "../../styled-system/jsx";
-import Link from "../components/Link";
 
 export default function PostList({ sidebarMode = false, ...props }) {
 	const pathname = usePathname().replace(/\/$/, "");
