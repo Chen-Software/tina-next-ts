@@ -1,8 +1,10 @@
-import { dialog } from "app/components/Dialog/dialog.template";
-import { heading } from "app/components/Heading/heading.template";
-import { paragraph } from "app/components/Text/paragraph.template";
-import { text } from "app/components/Text/text.template";
-import { button } from "../../app/components/Button/button.template";
+import { button } from "@chen/ui-components/templates";
+import { dialog } from "@chen/ui-components/templates";
+import { heading } from "@chen/ui-components/templates";
+import { stack } from "@chen/ui-components/templates";
+import { paragraph } from "@chen/ui-components/templates";
+import { text } from "@chen/ui-components/templates";
+import { toggleGroup } from "@chen/ui-components/templates";
 
 /**
  * @type {import('tinacms').Collection}
@@ -19,7 +21,7 @@ export default {
 			type: "object",
 			list: true,
 			isBody: true,
-			templates: [button, heading, text, paragraph, dialog],
+			templates: [button, heading, text, paragraph, toggleGroup, dialog, stack],
 		},
 	],
 	ui: {
