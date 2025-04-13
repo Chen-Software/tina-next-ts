@@ -1,4 +1,4 @@
-import { defineConfig } from "tinacms";
+import { defineConfig } from "packages/tinacms/packages/tinacms";
 import global from "./collections/global";
 import page from "./collections/page";
 import post from "./collections/post";

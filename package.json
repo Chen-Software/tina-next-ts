@@ -21,13 +21,13 @@
 		"next": "^14.2.25",
 		"react": "^18.3.1",
 		"react-dom": "^18.3.1",
-		"tinacms": "^2.7.3",
+		"tinacms": "link:packages/tinacms",
 		"typescript": "5.8.2"
 	},
 	"devDependencies": {
 		"@pandacss/dev": "^0.53.3",
 		"@park-ui/panda-preset": "^0.43.1",
-		"@tinacms/cli": "^1.9.3",
+		"@tinacms/cli": "link:packages/tinacms/packages/@tinacms/cli",
 		"@types/node": "^22.13.13",
 		"eslint": "^9.23.0",
 		"eslint-config-next": "^15.2.3"
