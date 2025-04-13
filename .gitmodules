@@ -1,6 +1,7 @@
 [submodule "ui-components"]
 	path = packages/ui-components
 	url = https://github.com/Chen-Software/ui-components
+	branch = build/latest
 [submodule "design-system"]
 	path = packages/design-system
 	url = https://github.com/Chen-Software/design-system
