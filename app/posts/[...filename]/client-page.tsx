@@ -1,11 +1,17 @@
 "use client";
-import { Breadcrumbs } from "app/components/Breadcrumbs";
-import { Button } from "app/components/Button";
-import { Code } from "app/components/Code";
-import { Drawer } from "app/components/Drawer";
-import { H1, H2, H3, H4, H5, H6 } from "app/components/Heading";
-import { Paragraph } from "app/components/Text";
-import Link from "next/link";
+import { Breadcrumbs } from "packages/ui-components/components/Breadcrumbs";
+import { Code } from "packages/ui-components/components/Code";
+import { Drawer } from "packages/ui-components/components/Drawer";
+import {
+	H1,
+	H2,
+	H3,
+	H4,
+	H5,
+	H6,
+} from "packages/ui-components/components/Heading";
+import { Link } from "packages/ui-components/components/Link";
+import { Paragraph } from "packages/ui-components/components/Text";
 import { tinaField, useTina } from "tinacms/dist/react";
 import { TinaMarkdown } from "tinacms/dist/rich-text";
 import { Box, Flex } from "../../../styled-system/jsx";

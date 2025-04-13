@@ -16,6 +16,8 @@
 	"dependencies": {
 		"@ark-ui/anatomy": "^3.5.0",
 		"@ark-ui/react": "^5.4.0",
+		"@chen/design-system": "link:packages/design-system",
+		"@chen/ui-components": "link:packages/ui-components",
 		"next": "^14.2.25",
 		"react": "^18.3.1",
 		"react-dom": "^18.3.1",
