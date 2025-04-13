@@ -1,6 +1,6 @@
+import { Link } from "packages/ui-components/components/Link";
 import type React from "react";
 import { createElement as h } from "react";
-import Link from "./components/Link";
 import "./styles/globals.css";
 import global from "../content/global/index.json";
 import { Box } from "../styled-system/jsx";
