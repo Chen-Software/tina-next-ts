@@ -7,7 +7,10 @@ import { Paragraph } from "packages/ui-components/components/Text/paragraph.cms"
 import { Text } from "packages/ui-components/components/Text/text.cms";
 import { ToggleGroup } from "packages/ui-components/components/ToggleGroup/toggle-group.cms";
 import React, { createElement as h } from "react";
-import { tinaField, useTina } from "tinacms/dist/react";
+import {
+  tinaField,
+  useTina,
+} from "packages/tinacms/packages/tinacms/dist/react";
 import { Box } from "../../styled-system/jsx";
 import type { PageQuery } from "../../tina/__generated__/types";
 

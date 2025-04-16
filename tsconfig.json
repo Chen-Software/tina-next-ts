@@ -18,7 +18,10 @@
 				"name": "next"
 			}
 		],
-		"strictNullChecks": true
+		"strictNullChecks": true,
+		"paths": {
+			"tinacms/*": ["packages/tinacms/packages/tinacms/*"],
+		}
 	},
 	"include": [
 		"next-env.d.ts",
