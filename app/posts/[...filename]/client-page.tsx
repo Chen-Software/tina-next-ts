@@ -12,8 +12,11 @@ import {
 } from "packages/ui-components/components/Heading";
 import { Link } from "packages/ui-components/components/Link";
 import { Paragraph } from "packages/ui-components/components/Text";
-import { tinaField, useTina } from "tinacms/dist/react";
-import { TinaMarkdown } from "tinacms/dist/rich-text";
+import {
+  tinaField,
+  useTina,
+} from "packages/tinacms/packages/tinacms/dist/react";
+import { TinaMarkdown } from "packages/tinacms/packages/tinacms/dist/rich-text";
 import { Box, Flex } from "../../../styled-system/jsx";
 import type {
 	PostConnectionQuery,

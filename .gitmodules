@@ -1,3 +1,7 @@
+[submodule "tinacms"]
+	path = packages/tinacms
+	url = https://github.com/Chen-Software/tinacms
+	branch = dev/main
 [submodule "ui-components"]
 	path = packages/ui-components
 	url = https://github.com/Chen-Software/ui-components
